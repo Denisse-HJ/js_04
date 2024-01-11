@@ -40,7 +40,17 @@ Examples:
     numer >= 1; condicional
     number--; número de pasos
  */
+const numDiv = num => {
+ 
+    if (num >= 1) {
+        
+        let result = [num / 2, num / 2];
+        return result;
+    
+    }
 
+};
+ 
 console.log(numDiv(4)); 
 console.log(numDiv(10)); 
 
@@ -56,8 +66,8 @@ Examples:
 - `secretName(['Harry', 'Ron', 'Hermione'])` should return `'HHR'`.
  */
 const secretName = mayus => { 
-    let secretName = mayus.map(name => name[0]).join('');
-
+    let secretName = mayus.map(name => name[0]).sort().join('');
+    
     return secretName;
 
 };
@@ -75,7 +85,6 @@ console.log(secretName(['Harry', 'Ron', 'Hermione']));
 Example:
 - `onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer'])` should return `'mockIng99, J0eyPunch and 1 more online'`.
  */
-
 
 console.log(user(['mockIng99', 'J0eyPunch', 'glassedFer'])); 
 
