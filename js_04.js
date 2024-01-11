@@ -85,8 +85,25 @@ console.log(secretName(['Harry', 'Ron', 'Hermione']));
 Example:
 - `onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer'])` should return `'mockIng99, J0eyPunch and 1 more online'`.
  */
+const users = ['mockIng99', 'J0eyPunch', 'glassedFer'];
 
-console.log(user(['mockIng99', 'J0eyPunch', 'glassedFer'])); 
+function getUsers(arr) {
+    const users = arr[0] + arr[1];
+    return users;
+    
+}
+
+const online = arr => {
+    if (arr.length >= 3) {
+        const allUsers = getUsers (users);
+        console.log (`Users:  ${allUsers}, and ${arr.length - 2} are online`);
+        } else {
+            console.log (`Users: ${users (', ')}  and ${arr.length - 2} are online`);
+            
+        }
+            
+}
+console.log(online(users));
 
 //Array of Multiples
 
@@ -99,9 +116,19 @@ Examples:
 - `arrayMultiplos(17, 6)` should return `[17, 34, 51, 68, 85, 102]`.
  */
 
+function arrMultiplos(number, length) {
+    
+    let multiplos = [];
 
+    for (let mul = 1; mul <= length; mul++) {
+        multiplos.push(number * mul);
+    }
+  
+    return multiplos;
+}
 
-
+console.log(arrMultiplos(2, 10)); 
+console.log(arrMultiplos(17, 6));
 
 //Positive dominance in Array
  
@@ -114,8 +141,22 @@ Example:
 - `positiveDom([-1, -3, -5, 4, 6767])` should return `false`.
  */
 
+const numArr = [-1, 3, 5, 4, 6767];
+const negativeArr = [-1, -3, -5, 4, 6767];
 
+function positiveArr(arr){
+    let positiveCount = 0;
+    arr.forEach((num) => {
+        if(num > 0) {
+            positiveCount++;
+        }
+    })
+    const mid= arr.length / 2;
+    return positiveCount > mid;
 
+}
+const res = positiveArr(negativeArr);
+console.log (res);
 
 //Antipodal Average
 
