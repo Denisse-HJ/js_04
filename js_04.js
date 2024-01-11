@@ -170,3 +170,20 @@ console.log (res);
 Example:
 - For the array `[1,2,3,5,22,6]`, the result should be `[3.5, 12, 4]`.
  */
+
+function shorterArr(arr) {
+    
+    const middleIndex = Math.floor(arr.length / 2);
+    const firstPart = arr.slice(0, middleIndex);
+    const secondPart = arr.slice(-middleIndex);
+    
+    const summedArr = firstPart.map((num, index) => num + secondPart[secondPart.length - 1 - index]);
+
+    const resultArr = summedArr.map(num => num / 2);
+
+    return resultArr;
+}
+
+const inputArr = [1, 2, 3, 5, 22, 6];
+const result = shorterArr(inputArr);
+console.log(result);  
