@@ -1,22 +1,46 @@
-/**
- * Realiza los siguientes ejercicios en JS y entrega por medio de un link tu repositorio que contiene los ejercicios resueltos.
- */
+/*  User profile */
 
-/**  User profile
-Write a program that prompts a user for their data: username, age, and a list of their favorite movies. 
-Store the information and then showcase it in the console. 
-Take note that the output for the films should add a small message like: 'The film {film} is one of my favorites'.
- 
- */
+/** 
+let user = window.prompt("What's your username?");
+
+let age = window.prompt("how old are you?");
+
+    let movie = [];
+
+    for (index = 0; index < 3; index++) {
+        let dato = prompt("write your favorite movies");
+        movie.push(dato);
+    }
+    
+        console.log(`Username: ${user} Age: ${age} and the film ${movie[0]} is one of my favorites`);
+*/
+/* Highest number */
 
 
+let number = [];
 
-/**
- * Highest number
-Write a program that asks for 10 numbers. Using logical operators and any other javascript functions/structures you've seen before, 
-determine and output the highest of those numbers.
- */
+    for (let i = 0; i < 10; i++) {
+        let valor = prompt("write un number");
+        number.push(valor);  
+    }
 
+    let max = number.reduce(function (a, b) {
+        return Math.max(a, b);
+        
+    }, -Infinity);   
+    
+        console.log(`The largest number is: ${max}`);
+        
+/**let number1 = window.prompt("write 1 number");
+let number2 = window.prompt("write 2 number");
+let number3 = window.prompt("write 3 number");
+let number4 = window.prompt("write 4 number");
+let number5 = window.prompt("write 5 number");
+let number6 = window.prompt("write 6 number");
+let number7 = window.prompt("write 7 number");
+let number8 = window.prompt("write 8 number");
+let number9 = window.prompt("write 9 number");
+let number10 = window.prompt("write 10 number");*/
 
 /**
  * Alarm
