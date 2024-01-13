@@ -8,24 +8,24 @@ Examples:
 - `sumResitance([8,15,100])` should return `'123 ohms'`. (8 + 15 + 100 = 123)
 
 Note: This approach uses the absolute value of each resistance to ensure all values are positive.
- * */ 
+ * */
 
-const sumaRes = resistenciaV => { 
+const sumaRes = resistenciaV => {
     let suma = 0;
 
     resistenciaV.forEach(resistencia => {
-        if (resistencia < 0) { 
-        resistencia *= -1;
+        if (resistencia < 0) {
+            resistencia *= -1;
         }
         suma += resistencia;
     });
 
-console.log(`sumaRes ${suma} ohms`);
+    console.log(`sumaRes ${suma} ohms`);
 
 };
-console.log(sumaRes([-1,5,6,3])); 
-console.log(sumaRes([14,3.5,6])); 
-console.log(sumaRes([8,15,100])); 
+console.log(sumaRes([-1, 5, 6, 3]));
+console.log(sumaRes([14, 3.5, 6]));
+console.log(sumaRes([8, 15, 100]));
 
 // Number divided into halves
 
@@ -41,18 +41,18 @@ Examples:
     number--; número de pasos
  */
 const numDiv = num => {
- 
+
     if (num >= 1) {
-        
+
         let result = [num / 2, num / 2];
         return result;
-    
+
     }
 
 };
- 
-console.log(numDiv(4)); 
-console.log(numDiv(10)); 
+
+console.log(numDiv(4));
+console.log(numDiv(10));
 
 // Secret Society
 
@@ -65,16 +65,16 @@ Examples:
 - `secretName(['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel'])` should return `'CJMPRR'`.
 - `secretName(['Harry', 'Ron', 'Hermione'])` should return `'HHR'`.
  */
-const secretName = mayus => { 
+const secretName = mayus => {
     let secretName = mayus.map(name => name[0]).sort().join('');
-    
+
     return secretName;
 
 };
 
-console.log(secretName(["Esperanza", "Franco", "Nia"])); 
-console.log(secretName(['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel'])); 
-console.log(secretName(['Harry', 'Ron', 'Hermione'])); 
+console.log(secretName(["Esperanza", "Franco", "Nia"]));
+console.log(secretName(['Phoebe', 'Ross', 'Chandler', 'Joey', 'Monica', 'Rachel']));
+console.log(secretName(['Harry', 'Ron', 'Hermione']));
 
 //Online status
 
@@ -90,18 +90,18 @@ const users = ['mockIng99', 'J0eyPunch', 'glassedFer'];
 function getUsers(arr) {
     const users = arr[0] + arr[1];
     return users;
-    
+
 }
 
 const online = arr => {
     if (arr.length >= 3) {
-        const allUsers = getUsers (users);
-        console.log (`Users:  ${allUsers}, and ${arr.length - 2} are online`);
-        } else {
-            console.log (`Users: ${users (', ')}  and ${arr.length - 2} are online`);
-            
-        }
-            
+        const allUsers = getUsers(users);
+        console.log(`Users:  ${allUsers}, and ${arr.length - 2} are online`);
+    } else {
+        console.log(`Users: ${users(', ')}  and ${arr.length - 2} are online`);
+
+    }
+
 }
 console.log(online(users));
 
@@ -117,21 +117,21 @@ Examples:
  */
 
 function arrMultiplos(number, length) {
-    
+
     let multiplos = [];
 
     for (let mul = 1; mul <= length; mul++) {
         multiplos.push(number * mul);
     }
-  
+
     return multiplos;
 }
 
-console.log(arrMultiplos(2, 10)); 
+console.log(arrMultiplos(2, 10));
 console.log(arrMultiplos(17, 6));
 
 //Positive dominance in Array
- 
+
 /**
  * Write a function to determine if an array is positively dominant.
 An array is positively dominant when the majority of its elements are positive.
@@ -144,19 +144,19 @@ Example:
 const numArr = [-1, 3, 5, 4, 6767];
 const negativeArr = [-1, -3, -5, 4, 6767];
 
-function positiveArr(arr){
+function positiveArr(arr) {
     let positiveCount = 0;
     arr.forEach((num) => {
-        if(num > 0) {
+        if (num > 0) {
             positiveCount++;
         }
     })
-    const mid= arr.length / 2;
+    const mid = arr.length / 2;
     return positiveCount > mid;
 
 }
 const res = positiveArr(negativeArr);
-console.log (res);
+console.log(res);
 
 //Antipodal Average
 
@@ -172,11 +172,11 @@ Example:
  */
 
 function shorterArr(arr) {
-    
+
     const middleIndex = Math.floor(arr.length / 2);
     const firstPart = arr.slice(0, middleIndex);
     const secondPart = arr.slice(-middleIndex);
-    
+
     const summedArr = firstPart.map((num, index) => num + secondPart[secondPart.length - 1 - index]);
 
     const resultArr = summedArr.map(num => num / 2);
