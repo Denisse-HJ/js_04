@@ -17,7 +17,7 @@ let age = window.prompt("how old are you?");
 /* Highest number */
 
 
-let number = [];
+/** let number = [];
 
     for (let i = 0; i < 10; i++) {
         let valor = prompt("write un number");
@@ -30,17 +30,7 @@ let number = [];
     }, -Infinity);   
     
         console.log(`The largest number is: ${max}`);
-        
-/**let number1 = window.prompt("write 1 number");
-let number2 = window.prompt("write 2 number");
-let number3 = window.prompt("write 3 number");
-let number4 = window.prompt("write 4 number");
-let number5 = window.prompt("write 5 number");
-let number6 = window.prompt("write 6 number");
-let number7 = window.prompt("write 7 number");
-let number8 = window.prompt("write 8 number");
-let number9 = window.prompt("write 9 number");
-let number10 = window.prompt("write 10 number");*/
+*/        
 
 /**
  * Alarm
@@ -51,6 +41,13 @@ Result example: "Time for bed after 10 seconds".
  */
 
 
+    let seconds = prompt('You want to set a sleep alert, tell me in how many seconds:')
+    seconds = seconds * 1000;
+    let convertido = parseInt(seconds, 10);
+
+    setTimeout(() => {
+        console.log(`Sleep time after  ${seconds/1000}  seconds`);
+      }, convertido);
 
 /**
  * Palindrome
